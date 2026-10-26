@@ -1,0 +1,8 @@
+<p>form1 works!</p>
+
+<form #empform="ngForm" (ngSubmit)="SaveEmp(empform.value)">
+    {{empform.value | json}} <br>
+    Name <input type="text" name="ename" #ename="ngModel" ngModel [class.is-invalid]="ename.invalid && ename.touched" class="form-control" required><br>
+    Salary<input type="text" name="esalary" #esalary="ngModel" ngModel class="form-control"><br>
+    <input type="submit" [disabled]="empform.invalid" value="Save" class="btn btn-primary">
+</form>

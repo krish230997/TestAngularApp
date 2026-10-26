@@ -1,0 +1,48 @@
+<p>second works!</p>
+
+<h1 *ngIf="block">If block</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Salary</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+   
+    <!-- <tr *ngFor="let e of arrobj">
+      <th scope="row">{{e.id}}</th>
+      <td>{{e.name}}</td>
+      <td>{{e.salary}}</td>
+    </tr>  -->
+   
+    @for(e of arrobj;track e.id)
+    {
+    <tr>
+      <th scope="row">{{e.id}}</th>
+      <td>{{e.name}}</td>
+      <td>{{e.salary}}</td>
+    </tr>
+    }
+    @empty{
+        <p>No Data Found</p>
+    }
+
+
+    
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<div [ngSwitch]="col">
+    <div *ngSwitchCase="'red'">Red Color Selected</div>
+    <div *ngSwitchCase="'green'">Green Color Selected</div>
+    <div *ngSwitchCase="'blue'">Blue Color Selected</div>
+    <div *ngSwitchDefault="'*'">None of the selected</div>
+</div>
+

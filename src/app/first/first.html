@@ -1,0 +1,23 @@
+<p>first works!</p>
+
+
+
+{{name}}  <br><br>
+
+<input type="color" #refval>
+<input type="submit" value="Click" (click)="display(refval.value)"><br><br><br>
+
+
+<input type="color" [(ngModel)]="testcol"><br>
+
+<h1 [style.color]="testcol">Masstech Business Solution</h1>
+
+first <input type="number" [(ngModel)]="fn" (input)="calci()"><br>
+second <input type="number" [(ngModel)]="sn" (input)="calci()"><br>
+choice <select [(ngModel)]="ch" (change)="calci()">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+</select><br>
+
+Result: {{res}}
